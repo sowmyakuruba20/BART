@@ -27,6 +27,9 @@ python app.py
 3. The application will display the estimated travel time in minutes and the fare amount in USD.
 4. Feel free to explore different source and destination combinations to find the optimal routes and fare details.
 
+To access the detailed walkthrough, instructions, and code examples, please visit the following link:
+https://medium.com/@sowmya.kuruba/bart-using-neo4j-d2e58812bb6a
+
 # Acknowledgements
 We would like to express our gratitude to the developers and contributors of the following tools and libraries used in this project:
 
