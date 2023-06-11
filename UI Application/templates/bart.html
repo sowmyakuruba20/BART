@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bart</title>
+        <link href="/static/css/app1.css" rel="stylesheet">
+        <style>
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+          </style>
+    </head>
+    <body class="text-center">
+        <img src="static/css/logo.png" alt="BART Logo" width="100" height="60">
+        <h1 class="h3 mb-3 fw-normal" style="margin-left: 10px; font-size: 24px;">Bay Area Rapid Transit</h1>
+  
+    <h2>Route Information</h2>
+    <p><b>Source: {{ origin_name }}</p>
+    <p>Destination: {{ destination_name }}</b></p>
+    <div class="estimate-container">
+        <div class="time-estimate">
+            <div class="content">
+            <h3>Travel Time</h3>
+            <p>Estimated time from source to destination  (Bart Extension): <br>{{ total_time+10 }} minutes</p>
+            <br>
+            <p>Estimated time from source to destination  (Bart + VTA)   : <br>{{ total_time+17 }} minutes</p>
+        </div>
+        </div>
+        <div class="price-estimate">
+            <div class="content">
+              <div style="text-align: center;">
+                <h3>Fares</h3>
+              </div>
+            <p> BART Youth Clipper fare: ${{ "{:.2f}".format(youth_clipper+2.5) }} &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VTA + Youth Clipper fare: ${{ "{:.2f}".format(youth_clipper+2.5) }}</p>
+            <p> BART Clipper fare: ${{ "{:.2f}".format(clipper+5.5) }} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VTA + Clipper fare: ${{ "{:.2f}".format(clipper+2.5) }}</p>
+            <p> BART Clipper Start fare: ${{ "{:.2f}".format(clipper_start+4.42) }} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VTA + Clipper Start fare: ${{ "{:.2f}".format(clipper_start+2.5) }} </p>
+            <p> BART Senior Clipper fare: ${{ "{:.2f}".format(senior_disabled_clipper+2.06) }} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VTA + Senior Clipper fare: ${{ "{:.2f}".format(senior_disabled_clipper+2.5) }} </p>
+
+            </div>
+        </div>
+    </div>
+
+    
+  </body>
+</html>
